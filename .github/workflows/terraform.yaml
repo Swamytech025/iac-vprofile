@@ -72,7 +72,6 @@ jobs:
         name: tfplan
         path: planfile
 
-
     - name: Terraform plan status
       id: planStatus
       if: steps.plan.outcome == 'failure'
