@@ -72,7 +72,6 @@ jobs:
         name: tfplan
         path: planfile
 
-
     - name: Terraform plan status
       id: planStatus
       if: steps.plan.outcome == 'failure'
@@ -85,5 +84,8 @@ jobs:
     #   run: terraform apply -auto-approve -input=false
 
     #########################
+<<<<<<< HEAD
 
     ########
+=======
+>>>>>>> 59b7279dc320a15fa8c6f9833e05ab6a9753fb5c
