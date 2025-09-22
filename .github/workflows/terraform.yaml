@@ -66,6 +66,13 @@ jobs:
       run: terraform plan -input=false -no-color -out planfile
       continue-on-error: true
 
+    - name: Upload Terraform Plan
+      uses: actions/upload-artifact@v3
+      with:
+        name: tfplan
+        path: planfile
+
+
     - name: Terraform plan status
       id: planStatus
       if: steps.plan.outcome == 'failure'
