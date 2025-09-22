@@ -33,7 +33,7 @@ terraform {
     #dynamodb_table = "terraform-lock"   # <--- state locking enabled
   }
 
-  required_version = "~> 1.6.3"
+  required_version = "~> 1.13.3"
 }
 ##
 ##
