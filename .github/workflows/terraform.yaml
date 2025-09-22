@@ -19,7 +19,7 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
   BUCKET_TF_STATE: ${{secrets.BUCKET_TF_STATE}}
   AWS_REGION: us-east-1
-  EKS_CLUSTER: gitops-eks
+  EKS_CLUSTER: gitOps-eks
 
 jobs:
   terraform:
@@ -69,7 +69,7 @@ jobs:
     - name: Terraform plan status
       id: planStatus
       if: steps.plan.outcome == 'failure'
-      run: exit 1 
+      run: exit 1
  
       # On push to "main", build or change infrastructure according to Terraform configuration files
       # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
